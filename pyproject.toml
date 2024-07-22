@@ -1,0 +1,21 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+# "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
+features = ["pyo3/extension-module"]
+
+[project]
+name = "rustpy_fm"
+version = "0.1.0"
+description = "A Python package with Rust-powered Factorization Machines"
+authors = [
+    { name = "Makoto Yui", email = "myui@apache.org" }
+]
+license = "Apache-2.0"
+dependencies = []
+
+[project.urls]
+homepage = "https://github.com/myui/rustpy-factorization-machines"
+repository = "https://github.com/myui/rustpy-factorization-machines"

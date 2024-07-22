@@ -1,0 +1,20 @@
+[package]
+name = "rustpy_fm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ndarray = "0.15"
+ndarray-rand = "0.14"
+rand = "0.8"
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+
+[dependencies.pyo3]
+version = "0.18"
+features = ["extension-module"]
+
+[package.metadata.maturin]
+bindings = "pyo3"
